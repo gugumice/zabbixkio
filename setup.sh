@@ -9,7 +9,7 @@ sed -i '/^# Additional overlays.*/a dtoverlay=disable-wifi\ndtoverlay=disable-bt
 #Set Autologin to console: https://github.com/RPi-Distro/raspi-config.git
 systemctl set-default multi-user.target
 ln -fs /lib/systemd/system/getty@.service /etc/systemd/system/getty.target.wants/getty@tty1.service
-cat > /etc/systemd/system/getty@tty1.service.d/autologin.conf << EOF
+cat > /etc/systemd/system/getty@tty1.service.d/autologin.conf
 
 
 #Set timezone & NTP
