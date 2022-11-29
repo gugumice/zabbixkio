@@ -33,4 +33,4 @@ chmod 755 /opt/zabbixkio/kiosk.sh
 mv log_in.sh /opt/zabbixkio/
 chmod 755 /opt/zabbixkio/log_in.sh
 
-echo '#xinit /opt/zabbixkio/kiosk -- vt$(fgconsole)'
+echo '#xinit /opt/zabbixkio/kiosk -- vt$(fgconsole)' >> ~/.bashrc
