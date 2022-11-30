@@ -12,8 +12,8 @@ apt-get install xdotool -y
 
 raspi-config nonint do_memory_256
 
-systemctl disable bluetooth.service
-systemctl disable hciuart.service
+#systemctl disable bluetooth.service
+#systemctl disable hciuart.service
 sed -i '/^# Additional overlays.*/a dtoverlay=disable-wifi\ndtoverlay=disable-bt' /boot/config.txt
 
 #Set Autologin to console: https://github.com/RPi-Distro/raspi-config.git
