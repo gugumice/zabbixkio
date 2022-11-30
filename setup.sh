@@ -10,11 +10,13 @@ apt-get install chromium-browser -y
 apt-get install matchbox-window-manager xautomation unclutter -y
 apt-get install xdotool -y
 
-raspi-config nonint do_memory_256
-
 #systemctl disable bluetooth.service
 #systemctl disable hciuart.service
+
+#Disable bt&wifi
 sed -i '/^# Additional overlays.*/a dtoverlay=disable-wifi\ndtoverlay=disable-bt' /boot/config.txt
+#Set gpu memory
+sed -i '/^\[all\].*/a gpu_mem=256' /boot/config.txt
 
 #Set Autologin to console: https://github.com/RPi-Distro/raspi-config.git
 systemctl set-default multi-user.target
