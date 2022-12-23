@@ -28,8 +28,8 @@ echo "Setting Wait for network"
 #Wait for network - to change  use "get_boot_wait" without argument
 sudo raspi-config nonint do_boot_wait 0
 
-echo "Writing to network"
-echo 'xinit /opt/zabbixkio/kiosk -- vt$(fgconsole)' >> ~/.bashrc
+echo "Setting x in bashrc"
+echo '#xinit /opt/zabbixkio/kiosk -- vt$(fgconsole)' >> ~/.bashrc
 
 echo "Setting Autologin"
 #Set Autologin to console: https://github.com/RPi-Distro/raspi-config.git
